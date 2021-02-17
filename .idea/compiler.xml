@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shop-product" />
+        <module name="shop-order" />
+        <module name="shop-user" />
+        <module name="shop-common" />
+        <module name="shop-products" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Product" target="1.8" />
+      <module name="shop-products" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Product" options="-parameters" />
+      <module name="SpringCloudAlibaba" options="-parameters" />
+      <module name="shop-common" options="-parameters" />
+      <module name="shop-order" options="-parameters" />
+      <module name="shop-product" options="-parameters" />
+      <module name="shop-products" options="-parameters" />
+      <module name="shop-user" options="-parameters" />
+    </option>
+  </component>
+</project>
