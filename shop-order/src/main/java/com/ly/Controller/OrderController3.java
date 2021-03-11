@@ -1,11 +1,12 @@
 package com.ly.Controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.ly.service.impl.OrderServiceImpl3;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.websocket.server.PathParam;
 
 /**
  * 服务稳定性保障：
@@ -26,7 +27,7 @@ public class OrderController3 {
     private OrderServiceImpl3 orderServiceImpl3;
 
     @RequestMapping("/order/message")
-    public String message() {
+    public String message(@PathParam("serviceName") String serviceName) {
         orderServiceImpl3.message();
         return "message test";
     }

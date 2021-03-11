@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 public class OrderServiceImpl3 {
 
     @SentinelResource(value = "message",
-            blockHandler = "blockHandler",
+            blockHandler = "blockHandler", //Sentinel相关异常
             blockHandlerClass = OrderServiceImpl3BlockHandler.class,
-            fallback = "fallback",
+            fallback = "fallback",   //Throwable相关异常
             fallbackClass = OrderServiceImpl3Fallback.class)
     public String message(){
         return "message";

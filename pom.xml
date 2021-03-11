@@ -14,6 +14,7 @@
         <module>shop-user</module>
         <module>shop-product</module>
         <module>shop-order</module>
+        <module>api-gateway</module>
     </modules>
 
     <!--指定父工程-->
@@ -43,4 +44,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+    </dependencies>
 </project>
